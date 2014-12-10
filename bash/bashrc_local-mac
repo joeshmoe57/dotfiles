@@ -1,0 +1,17 @@
+# Rewrite a few aliases because Mac is dumb.
+alias ls='ls -hFG'
+alias lr='ls -R'                    # recursive ls
+alias ll='ls -l'
+alias la='ll -A'
+alias lx='ll -BX'                   # sort by extension
+alias lz='ll -rS'                   # sort by size
+alias lt='ll -rt'                   # sort by date
+alias lm='la | more'
+
+# Mac uses a enviroment variable to color ls output.
+export CLICOLOR=1
+
+# Source bash completion from homebrew.
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi

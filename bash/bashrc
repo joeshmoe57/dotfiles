@@ -5,6 +5,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Source global definitions.
+if [ -f /etc/profile ]; then
+    . /etc/profile
+fi
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 PS1='[\u@\h \W]\$ '
 PS2='> '
 PS3='> '
@@ -78,9 +86,7 @@ complete -cf sudo
 complete -cf man
 
 # ls
-# this line needs to get commented out in OSX because its version of ls is different
-alias ls='ls -hFG --color=auto'
-#alias ls='ls -hFG'
+alias ls='ls --color=auto -hFG'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'
@@ -88,6 +94,13 @@ alias lx='ll -BX'                   # sort by extension
 alias lz='ll -rS'                   # sort by size
 alias lt='ll -rt'                   # sort by date
 alias lm='la | more'
+
+# new things
+alias u='cd ..'
+alias uu='cd ../..'
+alias uuu='cd ../../..'
+alias uuuu='cd ../../../..'
+alias uuuuu='cd ../../../../..'
 
 # cd and ls in one
 cl() {
@@ -99,3 +112,10 @@ cl() {
          fi
 }
 
+# Default editor is Vim.
+export EDITOR=vim
+
+# Source local overrides.
+if [ -f ~/.bashrc_local ]; then
+    . ~/.bashrc_local
+fi
