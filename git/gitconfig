@@ -1,0 +1,14 @@
+[user]
+	name = Joseph White
+   email = joeshmoe57@gmail.com
+[core]
+	editor = vim
+[alias]
+	st = status
+	ci = commit
+   unstage = reset HEAD --
+	last = log -l HEAD
+[color]
+	ui = auto
+[push]
+	default = simple
