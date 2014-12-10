@@ -78,7 +78,9 @@ complete -cf sudo
 complete -cf man
 
 # ls
-alias ls='ls -hFG --color=auto'
+# this line needs to get commented out in OSX because its version of ls is different
+alias ls='ls -hFG --color-auto'
+#alias ls='ls -hFG'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'
