@@ -8,8 +8,20 @@ alias lz='ll -rS'                   # sort by size
 alias lt='ll -rt'                   # sort by date
 alias lm='la | more'
 
+# cd and ls in one--must redefine for mac since it relies on ls
+cl() {
+   if [ -d "$1" ]; then
+      cd "$1"
+         ls
+   else
+      echo "bash: cl: '$1': Directory not found"
+         fi
+}
 # Mac uses a enviroment variable to color ls output.
 export CLICOLOR=1
+
+# grab the local version of the Javascript interpreter
+alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
 
 # Source bash completion from homebrew.
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
