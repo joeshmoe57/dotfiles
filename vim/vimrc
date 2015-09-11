@@ -102,6 +102,7 @@ inoremap Jj <ESC>
 autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp 
 autocmd BufNewFile,BufReadPost *.less set filetype=css 
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex
+autocmd BufNewFile,BufRead *.json set filetype=javascript
 " support for differing indentation based on filetype
 filetype plugin indent on
 
