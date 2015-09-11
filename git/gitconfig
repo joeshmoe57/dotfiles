@@ -5,7 +5,7 @@
 	editor = vim
 [alias]
 	st = status
-	ci = commit
+	ci = commit -v
    unstage = reset HEAD --
 	last = log -l HEAD
 [color]
