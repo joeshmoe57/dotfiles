@@ -7,7 +7,7 @@
 	st = status
 	ci = commit -v
    unstage = reset HEAD --
-	last = log -l HEAD
+	last = log -1 HEAD
 [color]
 	ui = auto
 [push]
