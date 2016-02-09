@@ -31,3 +31,5 @@ alias shed="cd ~/Electroloom/development/shed_project/shed"
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+$PATH=$PATH:"~/Development/kicad_scale"
