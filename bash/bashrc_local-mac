@@ -22,10 +22,6 @@ export CLICOLOR=1
 
 # grab the local version of the Javascript interpreter
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
-alias heddle_prod="cd ~/Electroloom/development/heddle_project/prod/heddle;python3 heddle.py"
-alias heddle="cd ~/Electroloom/development/heddle_project/heddle"
-alias shuttle="cd ~/Electroloom/development/shuttle_project/shuttle"
-alias shed="cd ~/Electroloom/development/shed_project/shed"
 
 # Source bash completion from homebrew.
 if [ -f $(brew --prefix)/etc/bash_completion ]; then

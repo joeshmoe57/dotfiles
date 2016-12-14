@@ -121,3 +121,5 @@ if [ -f ~/.bashrc_local ]; then
 fi
 
 alias find_rpi="arp -a | grep b8:27:eb | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'"
+
+export PATH=/local/usr/bin:$PATH
